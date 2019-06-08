@@ -1,4 +1,5 @@
 import React from "react";
+import Calculator from "./Calculator.jsx";
 
 export default class Converter extends React.Component{
     constructor(props){
@@ -9,11 +10,11 @@ export default class Converter extends React.Component{
     }
     handleValueChange = (event) =>{
         this.setState({amount: event.target.value});
-        console.log(this.state.amount);
     }
     render(){
         return <div>
-            <input type="number" name="count" min="1" value={this.state.amount} onChange={this.handleValueChange}/>
+            <input type="number" name="count" min="0" value={this.state.amount} onChange={this.handleValueChange}/>
+            <Calculator amount={this.state.amount} bid={this.props.bid}/>
             
         </div>
     }

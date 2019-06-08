@@ -17,8 +17,8 @@ export default class App extends React.Component{
     }    
     render(){
         return <div>
-           <CurrentExRate sell={this.state.rate.ask} buy={this.state.rate.bid}/>
-           <Converter/>
+           <CurrentExRate sell = {this.state.rate.ask} buy = {this.state.rate.bid}/>
+           <Converter bid = {this.state.rate.bid}/>
         </div>
     }
 }
