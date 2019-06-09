@@ -22,9 +22,13 @@ export default class Converter extends React.Component{
             alert("Wrong input!");
         }
         else{
-            this.setState({list: [...this.state.list, {amount: this.state.amount, title: this.state.title}], amount: "", title: ""});
+            this.setState({list: [...this.state.list, {amount: this.state.amount, title: this.state.title}].sort(), amount: "", title: ""});
         }
     }
+    deleteList = () =>{
+        this.setState({list: []});
+    }
+
     
     render(){
         return <div>
@@ -32,7 +36,7 @@ export default class Converter extends React.Component{
             <input type="number" name="count" min="0" placeholder="Amount..." value={this.state.amount} onChange={this.amountValueChange}/>
             <Calculator amount={this.state.amount} bid={this.props.bid}/>
             <button type="button" onClick={this.addToList}>Add to list</button>
-            <List list = {this.state.list} bid = {this.props.bid}/>
+            <List list = {this.state.list} bid = {this.props.bid} delete={this.deleteList}/>
         </div>
     }
     }
