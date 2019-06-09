@@ -8,8 +8,8 @@ export default class Calculator extends React.Component{
         return n/(factor/10);
     } 
     render(){
-        return <span>
+        return <div>
             {this.calcAndRound(this.props.bid, this.props.amount)}
-        </span>
+        </div>
     }
 }

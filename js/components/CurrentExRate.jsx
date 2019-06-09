@@ -1,13 +1,13 @@
 import React from 'react';
 
 export default class CurrentExRate extends React.Component{
+    constructor(props){
+        super(props);
+    }
     render(){
         return <div>
             <div>
-                We sell {this.props.sell}
-            </div>
-            <div>
-                We buy {this.props.buy}
+                Current exchange rate: {this.props.bid}
             </div>
         </div>
     }
