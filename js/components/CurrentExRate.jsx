@@ -1,14 +1,15 @@
 import React from 'react';
+import styled from "styled-components";
+
+const StyledWrapper = styled.div`
+padding:5px;
+`
 
 export default class CurrentExRate extends React.Component{
-    constructor(props){
-        super(props);
-    }
+
     render(){
-        return <div>
-            <div>
-                Current exchange rate: {this.props.bid}
-            </div>
-        </div>
+        return <StyledWrapper>
+            Current exchange rate: {this.props.bid}
+        </StyledWrapper>
     }
 }

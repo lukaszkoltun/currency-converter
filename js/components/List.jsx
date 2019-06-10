@@ -14,7 +14,7 @@ export default class List extends React.Component{
             <ul>
                 {this.props.list.map( (element , index) => <ListElement title={element.title} amount={element.amount} bid={this.props.bid} key={index} />)}
              </ul>
-            <button type="button" onClick={this.deleteButton}>Delete</button>
+            <button type="button" onClick={this.deleteButton} style={{"color": "indigo"}}>Delete</button>
         </div>
     }
 }
